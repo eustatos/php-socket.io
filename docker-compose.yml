@@ -15,3 +15,12 @@ services:
   redis:
     image: redis
     command: ["sh", "-c", "exec redis-server --requirepass \"${REDIS_PASSWORD}\""]
+  socket_io:
+    image: node
+    user: "node"
+    volumes:
+      - ./socket:/home/node/app
+    working_dir: /home/node/app
+    ports:
+      - 5000:5000
+    command: "npm start"

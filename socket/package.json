@@ -1,0 +1,15 @@
+{
+  "name": "socket-php-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "eustatos <astashkinav@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "redis": "^2.8.0",
+    "socket.io": "^2.1.0"
+  }
+}
