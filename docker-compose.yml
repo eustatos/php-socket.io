@@ -12,3 +12,6 @@ services:
     build: ./php
     volumes:
       - ./www:/www
+  redis:
+    image: redis
+    command: ["sh", "-c", "exec redis-server --requirepass \"${REDIS_PASSWORD}\""]

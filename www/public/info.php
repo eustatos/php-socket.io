@@ -1,13 +1,15 @@
 <?php
-require_once(
-  implode(
-    DIRECTORY_SEPARATOR,
-    [
-      dirname(__DIR__),
-      'Test.php'
-    ]
-  )
+$redis = new Redis();
+$redis->connect(
+  'redis',
+  6379
+);
+$redis->auth('eustatos');
+$redis->publish(
+  'eustatos',
+  json_encode([
+    'test' => 'success'
+  ])
 );
 
-$test = new Test();
-$test->prn();
+$redis->close();
