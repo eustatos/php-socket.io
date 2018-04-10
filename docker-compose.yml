@@ -24,3 +24,9 @@ services:
     ports:
       - 5000:5000
     command: "npm start"
+  client:
+    image: nginx
+    volumes:
+      - ./client:/usr/share/nginx/html
+    ports:
+      - 8000:80

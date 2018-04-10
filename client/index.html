@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+  <body>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+      <script>
+const socket = io(
+  window.location.protocol + '//' + window.location.hostname + ':5000'
+);
+        socket.on(
+          'eustatosRoom',
+          function(message) {
+            console.log(JSON.parse(message));
+          }
+        );
+      </script>
+  </body>
+</html>
