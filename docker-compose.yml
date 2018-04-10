@@ -8,3 +8,7 @@ services:
       - ./www:/www
     ports:
       - 4400:80
+  php:
+    build: ./php
+    volumes:
+      - ./www:/www
