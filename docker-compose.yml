@@ -1,0 +1,7 @@
+# docker-compose.yml
+version: '3'
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 4400:80
